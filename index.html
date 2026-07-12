@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title id="pageTitle">فرمانتور (بیوراکتور) | رایمند طیف واریان</title>
+<meta name="description" id="pageDesc" content="شرکت دانش‌بنیان رایمند طیف واریان — طراح و سازنده فرمانتور (بیوراکتور)، گازکروماتوگرافی GC و اینکوباتور CO2">
+<meta name="keywords" content="فرمانتور,بیوراکتور,گازکروماتوگرافی,اینکوباتور,fermentor,bioreactor,GC">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fermentor.ir/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="فرمانتور (بیوراکتور) | رایمند طیف واریان">
+<meta property="og:description" content="ساخت فرمانتور و بیوراکتور آزمایشگاهی و صنعتی — گازکروماتوگرافی GC — اینکوباتور CO2">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1a4572">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"رایمند طیف واریان","alternateName":["Raimand Teif Varian","Fermentor"],"url":"https://fermentor.ir","telephone":"+98-26-34702370","email":"raimandteifvarian@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Alborz","addressCountry":"IR"},"foundingDate":"2013"}</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+:root{
+  --navy:#1a4572;--navy-d:#0f2a44;--navy-l:#2563a8;
+  --teal:#0f766e;--amber:#f59e0b;--green:#16a34a;
+  --g50:#f8fafc;--g100:#f1f5f9;--g200:#e2e8f0;--g300:#cbd5e1;--g400:#94a3b8;--g500:#64748b;--g600:#475569;--g700:#334155;--g800:#1e293b;
+  --w:#ffffff;--font:'Vazirmatn',system-ui,sans-serif;
+  --r:12px;--rs:8px;--rl:16px;
+  --sh:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06);
+  --shm:0 4px 12px rgba(0,0,0,.1);
+  --shl:0 10px 30px rgba(0,0,0,.12);
+  --tr:all .3s cubic-bezier(.4,0,.2,1)
+}
+[lang="en"]{--font:'Inter',system-ui,sans-serif}
+body{font-family:var(--font);background:var(--g50);color:var(--g700);line-height:1.8;font-size:15px;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--navy-d);color:rgba(255,255,255,.8);font-size:.78rem;padding:6px 0}
+.topbar-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+.topbar a{color:var(--amber);font-weight:600}
+.topbar-r{display:flex;gap:14px;align-items:center}
+
+/* ── HEADER ── */
+.hdr{background:var(--w);border-bottom:1px solid var(--g200);position:sticky;top:0;z-index:100;transition:var(--tr)}
+.hdr.elev{box-shadow:var(--shm)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo-i{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--teal));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.1rem}
+.logo-t{font-weight:700;font-size:.95rem;color:var(--g800);line-height:1.2}
+.logo-t small{display:block;font-size:.65rem;color:var(--g400);font-weight:400}
+
+/* ── NAV ── */
+.nav{display:flex;gap:2px;align-items:center}
+.nav a{padding:7px 12px;border-radius:var(--rs);font-size:.83rem;font-weight:500;color:var(--g600);transition:var(--tr);white-space:nowrap}
+.nav a:hover{color:var(--navy);background:var(--g100)}
+.nav a.on{color:var(--navy);background:rgba(26,69,114,.08);font-weight:600}
+
+/* ── LANG ── */
+.lang{display:flex;gap:2px;background:var(--g100);border-radius:var(--rs);padding:2px;margin:0 6px}
+.lang button{padding:5px 10px;border-radius:6px;font-size:.75rem;font-weight:600;color:var(--g500);transition:var(--tr)}
+.lang button.on{background:var(--w);color:var(--navy);box-shadow:var(--sh)}
+
+/* ── BURGER ── */
+.burg{display:none;flex-direction:column;gap:5px;padding:6px;z-index:110}
+.burg span{width:22px;height:2.5px;background:var(--g800);border-radius:2px;transition:var(--tr)}
+.burg.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burg.open span:nth-child(2){opacity:0}
+.burg.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* ── DRAWER ── */
+.dov{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:98;opacity:0;pointer-events:none;transition:opacity .3s}
+.dov.open{opacity:1;pointer-events:auto}
+.drw{position:fixed;top:0;width:280px;height:100%;background:var(--w);z-index:99;padding:70px 20px 20px;overflow-y:auto;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+[dir="rtl"] .drw{right:0;transform:translateX(100%)}
+[dir="rtl"] .drw.open{transform:translateX(0)}
+[dir="ltr"] .drw{left:0;transform:translateX(-100%)}
+[dir="ltr"] .drw.open{transform:translateX(0)}
+.drw a{display:block;padding:12px 14px;color:var(--g700);font-size:.92rem;border-bottom:1px solid var(--g100);border-radius:var(--rs);transition:var(--tr)}
+.drw a:hover{background:var(--g50);color:var(--navy)}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(160deg,var(--navy-d) 0%,var(--navy) 50%,var(--teal) 100%);padding:36px 0 0;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20.5h-2zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20z' fill='%23ffffff' fill-opacity='.02'/%3E%3C/svg%3E")}
+.hero-c{text-align:center;padding:0 16px 28px;position:relative;z-index:2}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:5px 16px;border-radius:50px;font-size:.78rem;margin-bottom:14px;backdrop-filter:blur(4px)}
+.hero h1{font-size:clamp(1.4rem,4.5vw,2.6rem);font-weight:800;line-height:1.4;margin-bottom:10px}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--amber),#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{color:rgba(255,255,255,.75);font-size:clamp(.85rem,2.5vw,1rem);max-width:540px;margin:0 auto;line-height:2}
+
+/* ── SLIDER ── */
+.sl-w{position:relative;max-width:860px;margin:20px auto 0}
+.sl-f{border-radius:var(--rl) var(--rl) 0 0;overflow:hidden;box-shadow:0 -2px 30px rgba(0,0,0,.25);position:relative}
+.sl-t{display:flex;transition:transform .65s cubic-bezier(.4,0,.2,1)}
+.sl-s{min-width:100%;position:relative}
+.sl-s img{width:100%;height:auto;min-height:240px;max-height:420px;object-fit:cover;display:block}
+.sl-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(15,42,68,.85));padding:40px 20px 16px;color:#fff}
+.sl-cap h3{font-size:clamp(1rem,3vw,1.15rem);font-weight:700;margin-bottom:4px}
+.sl-cap p{font-size:clamp(.78rem,2vw,.88rem);color:rgba(255,255,255,.85);line-height:1.7}
+.sl-btn{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--navy-d);font-size:1rem;display:flex;align-items:center;justify-content:center;z-index:5;box-shadow:var(--shm);transition:var(--tr)}
+.sl-btn:hover{background:#fff;transform:translateY(-50%) scale(1.08)}
+.sl-prev{right:10px}
+.sl-next{left:10px}
+.sl-dots{display:flex;justify-content:center;gap:8px;padding:14px;background:var(--w)}
+.sl-dot{width:10px;height:10px;border-radius:50%;background:var(--g200);border:none;cursor:pointer;transition:var(--tr);padding:0}
+.sl-dot.on{background:var(--navy);transform:scale(1.3)}
+.sl-desc{background:var(--w);border:1px solid var(--g200);border-top:none;border-radius:0 0 var(--rl) var(--rl);padding:20px 24px;text-align:center;margin-bottom:-16px;position:relative;z-index:3;box-shadow:var(--sh)}
+.sl-desc h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.sl-desc p{color:var(--g600);font-size:.88rem;line-height:1.9}
+.hero-sp{height:40px}
+
+/* ── SECTION ── */
+.sec{padding:56px 0}
+.sec-t{font-size:clamp(1.3rem,3.5vw,2rem);font-weight:800;text-align:center;color:var(--g800);margin-bottom:8px}
+.sec-t em{font-style:normal;color:var(--navy)}
+.sec-st{text-align:center;color:var(--g400);margin-bottom:32px;font-size:.92rem}
+.divider{height:1px;background:var(--g200);margin:40px 0}
+
+/* ── STATS ── */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:32px 0}
+.st{background:var(--w);border:1px solid var(--g200);border-radius:var(--r);padding:16px;text-align:center;box-shadow:var(--sh)}
+.st b{display:block;font-size:clamp(1.5rem,4vw,2rem);font-weight:800;color:var(--navy);line-height:1.2}
+.st span{font-size:.8rem;color:var(--g500)}
+
+/* ── CARDS ── */
+.cards{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--w);border:1px solid var(--g200);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:var(--tr);box-shadow:var(--sh)}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shl);border-color:var(--navy-l)}
+.card-img{height:180px;overflow:hidden;position:relative}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .card-img img{transform:scale(1.05)}
+.card-tag{position:absolute;top:10px;right:10px;background:var(--navy);color:#fff;padding:3px 10px;border-radius:6px;font-size:.7rem;font-weight:700}
+.card-b{padding:16px}
+.card-b h3{font-size:1rem;font-weight:700;color:var(--g800);margin-bottom:6px}
+.card-b p{font-size:.85rem;color:var(--g500);line-height:1.8}
+
+/* ── FEAT ── */
+.feats{display:grid;grid-template-columns:1fr;gap:14px}
+.feat{background:var(--w);border:1px solid var(--g200);border-radius:var(--r);padding:20px;transition:var(--tr)}
+.feat:hover{border-color:var(--navy-l);box-shadow:var(--sh)}
+.feat-i{width:44px;height:44px;border-radius:10px;background:rgba(26,69,114,.07);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:12px}
+.feat h3{font-size:.95rem;font-weight:700;color:var(--g800);margin-bottom:6px}
+.feat p{font-size:.85rem;color:var(--g600);line-height:1.9}
+
+/* ── TWO COL ── */
+.tc{display:grid;grid-template-columns:1fr;gap:24px;align-items:start}
+.tc-img{border-radius:var(--rl);overflow:hidden;border:1px solid var(--g200);box-shadow:var(--shm)}
+.tc-img img{width:100%}
+.tc-text h3{font-size:1.15rem;font-weight:700;color:var(--g800);margin-bottom:12px}
+.tc-text p{color:var(--g600);line-height:2;margin-bottom:10px;font-size:.93rem}
+
+/* ── TABLE ── */
+.tbl-w{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;background:var(--w);border:1px solid var(--g200);border-radius:var(--r);overflow:hidden;min-width:320px}
+th,td{padding:11px 14px;text-align:right;border-bottom:1px solid var(--g100);font-size:.88rem}
+[dir="ltr"] th,[dir="ltr"] td{text-align:left}
+th{background:var(--g50);color:var(--navy);font-weight:700;font-size:.82rem}
+td:first-child{font-weight:600;color:var(--navy)}
+
+/* ── CONTACT ── */
+.ct-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.ct-card{background:var(--w);border:1px solid var(--g200);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.ct-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:18px}
+.ct-row:last-child{margin-bottom:0}
+.ct-ico{width:38px;height:38px;border-radius:10px;background:rgba(26,69,114,.06);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.ct-row h4{font-size:.75rem;color:var(--g400);font-weight:500;margin-bottom:2px}
+.ct-row p{font-size:.93rem;color:var(--g800);font-weight:600}
+
+/* ── GUARANTEE ── */
+.guar{display:inline-flex;align-items:center;gap:12px;background:rgba(15,118,110,.04);border:1px solid rgba(15,118,110,.12);padding:14px 20px;border-radius:var(--r);margin:14px 0}
+.guar-i{font-size:1.6rem}
+.guar h4{font-size:.88rem;color:var(--teal);margin-bottom:2px}
+.guar p{font-size:.78rem;color:var(--g400);margin:0}
+
+/* ── GALLERY ── */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.gal-i{border-radius:var(--r);overflow:hidden;border:1px solid var(--g200);cursor:pointer;aspect-ratio:4/3}
+.gal-i img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gal-i:hover img{transform:scale(1.05)}
+
+/* ── BTN ── */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;border-radius:var(--rs);font-size:.88rem;font-weight:600;border:none;transition:var(--tr);font-family:var(--font)}
+.btn-p{background:var(--navy);color:#fff}
+.btn-p:hover{background:var(--navy-d);transform:translateY(-2px);box-shadow:var(--shm)}
+.btn-o{background:transparent;border:2px solid var(--g200);color:var(--g700)}
+.btn-o:hover{border-color:var(--navy);color:var(--navy)}
+
+/* ── FOOTER ── */
+.ftr{background:var(--navy-d);color:rgba(255,255,255,.6);padding:40px 0 0;margin-top:40px}
+.ftr-grid{display:grid;grid-template-columns:1fr;gap:28px;padding-bottom:28px}
+.ftr h4{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:10px}
+.ftr p,.ftr a{font-size:.82rem;line-height:2.1}
+.ftr a:hover{color:var(--amber)}
+.ftr-bot{border-top:1px solid rgba(255,255,255,.1);padding:14px 0;text-align:center;font-size:.75rem}
+
+/* ── WA FLOAT ── */
+.wa{position:fixed;bottom:18px;left:18px;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;z-index:99;box-shadow:0 4px 14px rgba(37,211,102,.35);transition:var(--tr)}
+.wa:hover{transform:scale(1.1)}
+.wa svg{width:26px;height:26px;fill:#fff}
+
+/* ── LIGHTBOX ── */
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:200;align-items:center;justify-content:center;padding:16px}
+.lb.open{display:flex}
+.lb img{max-width:95%;max-height:90vh;border-radius:10px}
+.lb-x{position:absolute;top:16px;left:16px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1.3rem;cursor:pointer}
+
+/* ── PAGE ── */
+.pg{display:none}.pg.on{display:block}
+
+/* ── RESPONSIVE ── */
+@media(min-width:600px){
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .feats{grid-template-columns:repeat(2,1fr)}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .ct-grid{grid-template-columns:1fr 1fr}
+}
+@media(min-width:769px){
+  .burg{display:none!important}
+  .tc{grid-template-columns:1fr 1fr;gap:36px}
+  .tc-img{order:0}
+  .ftr-grid{grid-template-columns:2fr 1fr 1fr}
+  body{font-size:16px}
+}
+@media(max-width:768px){
+  .nav{display:none}
+  .burg{display:flex}
+  .topbar-r{display:none}
+  .sl-s img{min-height:200px;max-height:300px}
+  .sec{padding:40px 0}
+  .hero{padding:24px 0 0}
+  .hero-c{padding:0 12px 20px}
+}
+@media(max-width:380px){
+  .hero h1{font-size:1.25rem}
+  .st b{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar"><div class="wrap topbar-in">
+  <span data-t="topbar">🔬 بیش از ۱۰ سال تجربه در ساخت تجهیزات آزمایشگاهی و صنعتی</span>
+  <div class="topbar-r">
+    <span>📞 <a href="tel:02634702370" data-t="phone">۰۲۶-۳۴۷۰۲۳۷۰</a></span>
+    <span>📱 <a href="https://wa.me/989226354568">۰۹۲۲۶۳۵۴۵۶۸</a></span>
+  </div>
+</div></div>
+
+<!-- HEADER -->
+<header class="hdr" id="hdr"><div class="wrap hdr-in">
+  <a href="#" class="logo" onclick="go('home')"><div class="logo-i">R</div><div class="logo-t"><span data-t="logo">فرمانتور</span><small data-t="logo-s">رایمند طیف واریان</small></div></a>
+  <nav class="nav" id="nav"></nav>
+  <div class="lang"><button class="on" onclick="setLang('fa')">فا</button><button onclick="setLang('en')">EN</button></div>
+  <button class="burg" id="burg" onclick="togDrw()" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></header>
+
+<!-- DRAWER -->
+<div class="dov" id="dov" onclick="togDrw()"></div>
+<nav class="drw" id="drw"></nav>
+
+<!-- ═══════════ HOME ═══════════ -->
+<div id="p-home" class="pg on">
+  <section class="hero">
+    <div class="hero-c">
+      <div class="hero-badge" data-t="badge">🔬 شرکت دانش‌بنیان رایمند طیف واریان</div>
+      <h1><span data-t="h1a">ساخت </span><em data-t="h1b">فرمانتور</em><span data-t="h1c"> و </span><em data-t="h1d">بیوراکتور</em></h1>
+      <p class="hero-sub" data-t="hsub">طراحی و ساخت انواع فرمانتورهای اتوماتیک با قابلیت SIP و CIP — ۲ سال گارانتی و ۱۰ سال خدمات پس از فروش</p>
+    </div>
+    <div class="wrap">
+      <div class="sl-w">
+        <div class="sl-f"><div class="sl-t" id="slT"></div>
+          <button class="sl-btn sl-prev" onclick="sMv(1)">❯</button>
+          <button class="sl-btn sl-next" onclick="sMv(-1)">❮</button>
+          <div class="sl-dots" id="slD"></div>
+        </div>
+        <div class="sl-desc" id="slDesc"></div>
+      </div>
+    </div>
+  </section>
+  <div class="hero-sp"></div>
+
+  <!-- Stats -->
+  <section class="wrap"><div class="stats">
+    <div class="st"><b>+۱۰</b><span data-t="s1">سال تجربه</span></div>
+    <div class="st"><b>۲</b><span data-t="s2">سال گارانتی</span></div>
+    <div class="st"><b>۱۰</b><span data-t="s3">سال خدمات پس از فروش</span></div>
+    <div class="st"><b>۲۴/۷</b><span data-t="s4">پشتیبانی</span></div>
+  </div></section>
+
+  <!-- Products -->
+  <section class="sec"><div class="wrap">
+    <h2 class="sec-t" data-t="ptit">محصولات <em>رایمند طیف واریان</em></h2>
+    <p class="sec-st" data-t="psub">تولید تجهیزات آزمایشگاهی و صنعتی پیشرفته با تکنولوژی روز دنیا</p>
+    <div class="cards" id="cGrid"></div>
+  </div></section>
+
+  <!-- About Fermentor -->
+  <section class="sec" style="background:var(--w);border-top:1px solid var(--g100);border-bottom:1px solid var(--g100)">
+    <div class="wrap">
+      <div class="tc">
+        <div class="tc-text">
+          <h3 data-t="ftit">فرمانتور چیست؟</h3>
+          <p data-t="fd1">فرمانتور دستگاهی است که شرایط بهینه را برای رشد میکروارگانیسم‌ها مثل قارچ و باکتری و مخمر فراهم می‌کند. میکروارگانیسم‌ها در این شرایط خاص، بهتر و بیش‌تر رشد و فعالیت خواهند کرد.</p>
+          <p data-t="fd2">استفاده از فرمانتور به میکروارگانیسم‌ها این امکان را می‌دهد که پیش از انتقال به مرحله‌ی تولید بیش از ده نسل رشد کنند. با این دستگاه می‌توان پارامترهای دما و فوم، دور موتور، مقدار اکسیژن و pH را مدام کنترل کرد.</p>
+          <p data-t="fd3">فرمانتورها و بیوراکتورها برای کشت سلول‌های جانوری و گیاهی هم استفاده می‌شوند. با یک هوادهنده برای تأمین اکسیژن در فرآیندهای هوازی و نیز یک اسپارجر برای یکنواخت ساختن غلظت محیط کشت و یک ترموستات برای تنظیم دمای محیط کشت فراهم می‌شود.</p>
+          <p data-t="fd4">راکتورها می‌توانند جهت تولید انبوه مواد شیمیایی، دارویی و مواد پتروشیمی و در واحدهای صنعتی بزرگ به کار گرفته شوند و یا جهت انجام مطالعات و تحقیقات و در ابعاد کوچک به کار بروند.</p>
+          <div class="guar"><span class="guar-i">🛡️</span><div><h4 data-t="gd">۲ سال گارانتی + ۱۰ سال خدمات پس از فروش</h4><p data-t="gp">تمامی دستگاه‌های تولید شده توسط این شرکت</p></div></div>
+        </div>
+        <div class="tc-img"><img src="https://web.archive.org/web/20260211181231im_/https://fermentor.ir/wp-content/uploads/2022/02/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AA%D9%88%D8%B1%DB%B1.jpg" alt="فرمانتور" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="sec"><div class="wrap">
+    <h2 class="sec-t" data-t="atit">کاربردهای <em>فرمانتور</em></h2>
+    <p class="sec-st" data-t="asub">از صنایع تخمیری تا تولید دارو و واکسن</p>
+    <div class="feats" id="appGrid"></div>
+  </div></section>
+</div>
+
+<!-- ═══════════ FERMENTOR ═══════════ -->
+<div id="p-fermentor" class="pg">
+  <div class="sec"><div class="wrap">
+    <h2 class="sec-t" data-t="ftit2">فرمانتور <em>(بیوراکتور)</em></h2>
+    <p class="sec-st" data-t="fsub2">ساخت فرمانتور ۵، ۱۰، ۲۰ لیتری قابل اتوکلاو و ۲۰۰ لیتری با سیستم CIP و SIP</p>
+
+    <div class="tc" style="margin-bottom:32px">
+      <div class="tc-img"><img src="https://web.archive.org/web/20260211181231im_/https://fermentor.ir/wp-content/uploads/2025/11/1125.jpg" alt="فرمانتور" loading="lazy"></div>
+      <div class="tc-text">
+        <h3 data-t="fb1">بیوراکتورهای رایمند</h3>
+        <p data-t="fb2">در ظرفیت‌های مختلف آزمایشگاهی، نیمه‌صنعتی و صنعتی با طراحی دقیق و هوشمندانه. طراحی و ساخت انواع فرمانتورهای اتوماتیک با قابلیت SIP و CIP.</p>
+        <p data-t="fb3"><strong data-t="fb4">بخش‌های اصلی فرمانتور:</strong> ظرف کشت، پمپ‌ها، لوازم جانبی ظرف کشت شامل لوله هوادهی، اسپارجر، لوله‌های نمونه‌برداری، موتور و همزن، کندانسور، سنسور دما، سنسور سطح، پورت‌های افزودنی، سیستم کنترلی، سیرکولاتور، برنامه کنترلی تحت نرم‌افزار با قابلیت بالا.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3 class="sec-t" style="font-size:1.3rem" data-t="fspec">مشخصات فنی فرمانتورهای قابل اتوکلاو</h3>
+    <div class="tbl-w" style="max-width:800px;margin:20px auto">
+      <table>
+        <tr><td data-t="sp1">ظرف کشت</td><td data-t="sv1">مخزن شیشه‌ای از جنس پیرکس در مقیاس آزمایشگاهی و استیل ضد زنگ 316 در مقیاس صنعتی و نیمه‌صنعتی</td></tr>
+        <tr><td data-t="sp2">سنسورها</td><td>PH-DO</td></tr>
+        <tr><td data-t="sp3">سیستم کنترل دما</td><td data-t="sv3">در محدوده دمای محیط تا ۶۰ درجه سانتیگراد</td></tr>
+        <tr><td data-t="sp4">پمپ‌ها</td><td data-t="sv4">پمپ‌های پریستالتیک دور متغیر با قابلیت تنظیم دبی Watson Marlow</td></tr>
+        <tr><td data-t="sp5">سیستم کنترلی</td><td data-t="sv5">اندازه‌گیری دقیق مقدار PH-DO، دور موتور، دما، فوم و ذخیره‌سازی اطلاعات</td></tr>
+        <tr><td data-t="sp6">اندازه‌گیری گاز</td><td data-t="sv6">اندازه‌گیری گازهای خروجی داخل مخزن توسط TMFC و OFF-GASS</td></tr>
+        <tr><td data-t="sp7">پولیش سطوح در تماس</td><td data-t="sv7">316 مکانیکی و الکتروپولیش تا ۰.۲ میکرون</td></tr>
+        <tr><td data-t="sp8">پولیش سطوح غیرتماس</td><td data-t="sv8">304 مکانیکی و آینه تا ۰.۶ میکرون</td></tr>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+    <h3 class="sec-t" style="font-size:1.3rem" data-t="fadv">مزایای فرمانتورهای شرکت رایمند</h3>
+    <div class="feats" id="advGrid"></div>
+
+    <div class="divider"></div>
+    <h3 class="sec-t" style="font-size:1.3rem" data-t="fdet">مشخصات تفصیلی فرمانتور ۵-۱۰-۲۰-۲۰۰ لیتری</h3>
+    <div class="feats">
+      <div class="feat">
+        <h3 style="color:var(--navy)" data-t="dt1">مخزن شیشه‌ای آلمانی</h3>
+        <p data-t="dt1d">مدرج پولیش پلت در حد ۰.۶ میکرون نگهدارنده، صفحه بالایی و اتصالات از جنس استیل ضد زنگ L 316 SANDWICK. پره‌های همزن (از نوع راشتون).</p>
+        <ul style="color:var(--g600);padding-right:18px;margin-top:8px;line-height:2.2;font-size:.88rem" id="dt1List"></ul>
+      </div>
+      <div class="feat">
+        <h3 style="color:var(--navy)" data-t="dt2">سنسورها و سیستم کنترل</h3>
+        <p>• <span data-t="dt2a">سنسور pH (سوئیس)</span><br>• <span data-t="dt2b">سنسور DO (سوئیس)</span></p>
+        <p style="margin-top:10px"><strong>Panel PC:</strong> <span data-t="dt2c">کامپیوتر PC با قابلیت نصب نمایش نمودار تغییرات دما، دور همزن، غلظت اکسیژن محلول (DO) و pH. ذخیره‌سازی اطلاعات در پوشه جداگانه. کنترل دما، pH، DO، سرعت چرخش همزن و کف. کالیبراسیون الکترودهای pH و DO. تنظیم مقادیر متغیرها.</span></p>
+      </div>
+      <div class="feat">
+        <h3 style="color:var(--navy)" data-t="dt3">سیستم‌های کنترلی</h3>
+        <p data-t="dt3d">با قابلیت اندازه‌گیری و کنترل دما، pH، DO، سرعت چرخش همزن و کف شامل:</p>
+        <ul style="color:var(--g600);padding-right:18px;margin-top:8px;line-height:2.2;font-size:.88rem" id="dt3List"></ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="tc">
+      <div class="tc-text">
+        <p data-t="fd1">فرمانتور دستگاهی است که شرایط بهینه را برای رشد میکروارگانیسم‌ها مثل قارچ و باکتری و مخمر فراهم می‌کند. میکروارگانیسم‌ها در این شرایط خاص، بهتر و بیش‌تر رشد و فعالیت خواهند کرد.</p>
+        <p data-t="fd2">استفاده از فرمانتور به میکروارگانیسم‌ها این امکان را می‌دهد که پیش از انتقال به مرحله‌ی تولید بیش از ده نسل رشد کنند. با این دستگاه می‌توان پارامترهای دما و فوم، دور موتور، مقدار اکسیژن و pH را مدام کنترل کرد.</p>
+        <p data-t="fd3">فرمانتورها و بیوراکتورها برای کشت سلول‌های جانوری و گیاهی هم استفاده می‌شوند. با یک هوادهنده برای تأمین اکسیژن در فرآیندهای هوازی و نیز یک اسپارجر برای یکنواخت ساختن غلظت محیط کشت و یک ترموستات برای تنظیم دمای محیط کشت فراهم می‌شود.</p>
+        <p data-t="fd5">طراحی راکتورها با توجه به مکانیسم واکنش و همچنین نوع واکنش و فاز مواد درگیر در واکنش متفاوت است. در طراحی راکتورهای شیمیایی برخی از پارامترها مانند دما، فشار و دبی مواد ورودی و خروجی، توسط طراح قابل تغییر است.</p>
+      </div>
+      <div class="tc-img"><img src="https://web.archive.org/web/20260211181231im_/https://fermentor.ir/wp-content/uploads/2022/02/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AA%D9%88%D8%B1%DB%B1.jpg" alt="فرمانتور" loading="lazy"></div>
+    </div>
+
+    <div class="guar" style="text-align:center;justify-content:center;margin:32px auto;max-width:500px"><span class="guar-i">🛡️</span><div><h4 data-t="gfull">دستگاه‌های تولید شده شامل ۲ سال گارانتی و ۱۰ سال خدمات پس از فروش می‌باشد.</h4></div></div>
+
+    <div class="divider"></div>
+    <h3 class="sec-t" style="font-size:1.3rem" data-t="gtit">گالری تصاویر فرمانتور</h3>
+    <div class="gal" id="galGrid"></div>
+  </div></div>
+</div>
+
+<!-- ═══════════ CELL CULTURE ═══════════ -->
+<div id="p-cellculture" class="pg">
+  <div class="sec"><div class="wrap">
+    <h2 class="sec-t" data-t="ctit">بیوراکتور <em>کشت سلولی</em></h2>
+    <p class="sec-st" data-t="csub">در ظرفیت‌های آزمایشگاهی با سنسورهای پیشرفته</p>
+    <div class="tc">
+      <div class="tc-img"><img src="https://web.archive.org/web/20260211175323im_/https://fermentor.ir/wp-content/uploads/2024/09/Screenshot_%DB%B2%DB%B0%DB%B2%DB%B4%DB%B0%DB%B9%DB%B1%DB%B7_%DB%B1%DB%B8%DB%B0%DB%B0%DB%B1%DB%B1_Gallery-820x1024.jpg" alt="بیوراکتور کشت سلولی" loading="lazy"></div>
+      <div class="tc-text">
+        <h3 data-t="cfeat">ویژگی‌های بیوراکتور کشت سلولی</h3>
+        <ul style="color:var(--g700);line-height:2.8;padding-right:20px;font-size:.95rem" id="cList"></ul>
+        <div class="guar" style="margin-top:16px"><span class="guar-i">🔬</span><div><h4>Conducting fermentation reactions</h4><p>Research in Microbiology. Development of live vaccines. Pharmacological testing of medicines.</p></div></div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════════ GC ═══════════ -->
+<div id="p-gc" class="pg">
+  <div class="sec"><div class="wrap">
+    <h2 class="sec-t" data-t="gtit2">گازکروماتوگرافی <em>GC</em></h2>
+    <p class="sec-st" data-t="gsub2">ساخت شرکت رایمند طیف واریان مطابق با تکنولوژی Agilent 8890</p>
+    <div class="tc" style="margin-bottom:32px">
+      <div class="tc-img"><img src="https://web.archive.org/web/20250815050831im_/https://fermentor.ir/wp-content/uploads/2023/03/%DA%AF%D8%A7%D8%B2%DA%A9%D8%B1%D9%88%D9%85%D8%A7%D8%AA%D9%88%DA%AF%D8%B1%D8%A7%D9%81-1.jpg" alt="گازکروماتوگرافی" loading="lazy"></div>
+      <div class="tc-text">
+        <h3 data-t="gd1">دستگاه گازکروماتوگرافی رایمند طیف واریان</h3>
+        <ul style="color:var(--g700);line-height:2.6;padding-right:20px" id="gcList"></ul>
+        <div class="guar" style="margin-top:14px"><span class="guar-i">🛡️</span><div><h4 data-t="gg">دستگاه ۲ سال گارانتی و ۱۰ سال خدمات پس از فروش دارد.</h4></div></div>
+      </div>
+    </div>
+
+    <p style="text-align:center;max-width:750px;margin:0 auto 32px;font-size:.95rem;color:var(--g700)" data-t="gnote"><strong style="color:var(--navy)">در ساخت این مدل از GC توسط شرکت رایمند</strong> سعی بر آن شده است تا تمامی نمونه‌های تزریقی به این GC با نمونه 8890 مطابقت داشته باشد و پاسخگویی دستگاه دقیقاً مطابق با نمونه خارجی آن باشد.</p>
+
+    <div class="feats" style="max-width:860px;margin:0 auto" id="gcSpecs"></div>
+
+    <div class="divider"></div>
+    <h3 class="sec-t" style="font-size:1.3rem" data-t="gcq">کروماتوگرافی گازی چیست؟</h3>
+    <div style="max-width:750px;margin:0 auto" id="gcText"></div>
+  </div></div>
+</div>
+
+<!-- ═══════════ INCUBATOR ═══════════ -->
+<div id="p-incubator" class="pg">
+  <div class="sec"><div class="wrap">
+    <h2 class="sec-t" data-t="icit">اینکوباتور <em>CO2</em></h2>
+    <p class="sec-st" data-t="isub">اینکوباتور دی‌اکسید کربن با دقت بالا</p>
+    <div class="tc">
+      <div class="tc-img"><img src="https://web.archive.org/web/20260211183457im_/https://fermentor.ir/wp-content/uploads/2024/09/Screenshot_%DB%B2%DB%B0%DB%B2%DB%B4%DB%B0%DB%B9%DB%B1%DB%B7_%DB%B1%DB%B8%DB%B1%DB%B9%DB%B4%DB%B5_Gallery-1021x576.jpg" alt="اینکوباتور CO2" loading="lazy"></div>
+      <div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:14px" data-t="ispec">مشخصات فنی اینکوباتور CO2</h3>
+        <div class="tbl-w"><table id="iTable"></table></div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════════ PETRO ═══════════ -->
+<div id="p-petro" class="pg">
+  <div class="sec"><div class="wrap">
+    <h2 class="sec-t" data-t="ptit2">اتوماسیون صنعتی و <em>پتروشیمی</em></h2>
+    <p class="sec-st" data-t="psub2">اندازه‌گیری مقادیر آنالوگ و نرم‌افزار ردینگ دیتا با سورس سوئیس</p>
+    <div class="tc">
+      <div class="tc-img"><img src="https://web.archive.org/web/20260211185851im_/https://fermentor.ir/wp-content/uploads/2022/02/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AA%D9%88%D8%B1-Copy.png" alt="پتروشیمی" loading="lazy"></div>
+      <div class="feats" id="petroGrid"></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<div id="p-about" class="pg">
+  <div class="sec"><div class="wrap">
+    <h2 class="sec-t" data-t="abtit">شرکت <em>رایمند طیف واریان</em></h2>
+    <p class="sec-st" data-t="absub">ساخت فرمانتور و گازکروماتوگرافی</p>
+    <div style="max-width:720px;margin:0 auto" id="abText"></div>
+    <div class="guar" style="text-align:center;justify-content:center;max-width:500px;margin:24px auto"><span class="guar-i">🛡️</span><div><h4 data-t="abg">تمامی تجهیزات ساخت این مجموعه</h4><p data-t="abgp">۲ سال گارانتی و پشتیبانی ۲۴ ساعته و ۱۰ سال خدمات پس از فروش دارد</p></div></div>
+    <div class="divider"></div>
+    <h3 class="sec-t" style="font-size:1.3rem" data-t="abprod">محصولات ما</h3>
+    <div class="feats" style="max-width:860px;margin:0 auto">
+      <div class="feat" style="text-align:center"><div class="feat-i" style="margin:0 auto 12px">🧪</div><h3 data-t="abp1">دستگاه فرمانتور</h3><p data-t="abp1d">بیوراکتورهای آزمایشگاهی، نیمه‌صنعتی و صنعتی</p></div>
+      <div class="feat" style="text-align:center"><div class="feat-i" style="margin:0 auto 12px">⚗️</div><h3 data-t="abp2">دستگاه گازکروماتوگرافی</h3><p data-t="abp2d">GC مطابق با تکنولوژی Agilent 8890</p></div>
+      <div class="feat" style="text-align:center"><div class="feat-i" style="margin:0 auto 12px">🌡️</div><h3 data-t="abp3">اینکوباتور CO2</h3><p data-t="abp3d">اینکوباتور دی‌اکسید کربن با دقت بالا</p></div>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <img src="https://web.archive.org/web/20250630005734im_/https://fermentor.ir/wp-content/uploads/2022/02/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AA%D9%88%D8%B12.jpg" alt="فرمانتور" style="max-width:360px;width:100%;border-radius:var(--rl);border:1px solid var(--g200);box-shadow:var(--shm);margin:0 auto" loading="lazy">
+      <h4 style="margin-top:12px;color:var(--navy)" data-t="logo">رایمند طیف واریان</h4>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<div id="p-contact" class="pg">
+  <div class="sec"><div class="wrap">
+    <h2 class="sec-t" data-t="cntit">تماس <em>با ما</em></h2>
+    <p class="sec-st" data-t="cnsub">ما در خدمت شما هستیم</p>
+    <div class="ct-grid">
+      <div class="ct-card">
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:18px" data-t="cninfo">اطلاعات تماس</h3>
+        <div class="ct-row"><div class="ct-ico">📍</div><div><h4 data-t="cnaddr-l">آدرس</h4><p data-t="cnaddr" style="font-weight:500">کیلومتر ۵۵ اتوبان کرج قزوین، انتهای بلوار سوپا، انتهای بلوار کاوش، پارک علم و فناوری البرز</p></div></div>
+        <div class="ct-row"><div class="ct-ico">📞</div><div><h4 data-t="cnphone-l">شماره تماس</h4><p style="direction:ltr;text-align:inherit">026-34702370</p></div></div>
+        <div class="ct-row"><div class="ct-ico">📱</div><div><h4 data-t="cnmob-l">شماره همراه</h4><p style="direction:ltr;text-align:inherit">09014935691</p></div></div>
+        <div class="ct-row"><div class="ct-ico">💬</div><div><h4>WhatsApp</h4><p style="direction:ltr;text-align:inherit">09226354568</p></div></div>
+        <div class="ct-row"><div class="ct-ico">📧</div><div><h4>Email</h4><p style="direction:ltr;text-align:inherit">raimandteifvarian@gmail.com</p></div></div>
+      </div>
+      <div class="ct-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+        <div style="font-size:3.5rem;margin-bottom:12px">🏢</div>
+        <h3 style="color:var(--navy);margin-bottom:6px" data-t="company">شرکت رایمند طیف واریان</h3>
+        <p style="color:var(--g400);margin-bottom:20px" data-t="park">پارک علم و فناوری البرز</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+          <a href="tel:02634702370" class="btn btn-p" data-t="callbtn">📞 تماس تلفنی</a>
+          <a href="https://wa.me/989226354568" target="_blank" rel="noopener" class="btn btn-o" data-t="wabtn">💬 واتس‌اپ</a>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════════ ARABIC GC ═══════════ -->
+<div id="p-gc-ar" class="pg">
+  <div class="sec"><div class="wrap">
+    <h2 class="sec-t">كروماتوغرافيا <em>الغاز</em></h2>
+    <p class="sec-st">جهاز كروماتوغرافيا الغاز المصنعة من قبل شركة Raimand Specifarian</p>
+    <div class="tc">
+      <div class="tc-img"><img src="https://web.archive.org/web/20250815050831im_/https://fermentor.ir/wp-content/uploads/2023/03/%DA%AF%D8%A7%D8%B2%DA%A9%D8%B1%D9%88%D9%85%D8%A7%D8%AA%D9%88%DA%AF%D8%B1%D8%A7%D9%81-1.jpg" alt="كروماتوغرافيا الغاز" loading="lazy"></div>
+      <div class="tc-text">
+        <h3>جهاز كروماتوغرافيا الغاز</h3>
+        <p>جهاز كروماتوغرافيا الغاز المصنعة من قبل شركة Raimand Specifarian، تصميم Agilent 8890</p>
+        <ul style="color:var(--g700);line-height:2.6;padding-right:20px;margin-top:12px"><li>كاشفات FID و TCD</li><li>دقة نانو دقيقة</li><li>تحليل قوي وقابلية استنساخ عالية</li><li>حساسية عالية للكاشف</li></ul>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div style="max-width:750px;margin:0 auto;line-height:2.2;color:var(--g700)">
+      <p style="margin-bottom:14px">كروماتوغرافيا الغاز هي إحدى طرق الفصل اللوني التي تستخدم لفحص وفصل المواد المتطايرة دون تحللها.</p>
+      <p style="margin-bottom:14px">في كروماتوغرافيا الغاز، الطور الغازي عبارة عن غاز خامل (على سبيل المثال، الهيليوم والنيتروجين والأرجون وثاني أكسيد الكربون). وتسمى المرحلة المتنقلة أيضًا بالغاز الحامل.</p>
+      <p style="margin-bottom:14px">المرحلة الثابتة هي مادة صلبة ماصة أو طبقة رقيقة من سائل غير متطاير التي توضع على الجدار الداخلي للعمود أو كطلاء على سطح الزجاج أو الكريات المعدنية.</p>
+      <p style="margin-bottom:14px">إذا كانت المرحلة الثابتة عبارة عن مادة صلبة ماصة، فإنها تسمى كروماتوغرافيا الغاز وإذا كانت المرحلة الثابتة عبارة عن سائل غير متطاير، فإنها تسمى كروماتوغرافيا الغاز والسائل. لكن كلاهما يعرف باسم كروماتوغرافيا الغاز.</p>
+      <p style="margin-bottom:14px">في كروماتوغرافيا الغاز، يكون فصل مكونات الخليط متناسبًا مع كمية توزيع مكونات الخليط بين الطور المتحرك الغازي والمرحلة الثابتة الصلبة أو السائلة.</p>
+      <p style="margin-bottom:14px">في هذه الطريقة، يحرك الغاز الحامل الخليط داخل العمود ويتم توزيع مكونات الخليط بين مرحلتين في حالة توازن (غاز-سائل). لذلك، فإن الطور المتحرك ينقل مكونات العينة إلى خارج العمود، وأي جزيء يتم امتصاصه بوصلة أكثر مرونة بالعمود، في وقت سابق والجزء الذي يحتوي على قوة امتصاص أكبر مع العمود، يغادرون العمود لاحقًا؛ لذلك، يتم فصل مكونات الخليط عن بعضها البعض.</p>
+      <p>يستخدم كروماتوغرافيا الغاز أيضًا لفصل وتحديد مكونات خليط من المواد المتطايرة وتحليلها الكمي.</p>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════════ ARABIC FERMENTOR ═══════════ -->
+<div id="p-fermentor-ar" class="pg">
+  <div class="sec"><div class="wrap">
+    <h2 class="sec-t">المخمر — <em>مفاعل حيوي</em></h2>
+    <p class="sec-st">تصنيع جهاز التعقيم بالبخار 5-10-20 و 200 لتر بنظام CIP و SIP</p>
+    <div style="max-width:750px;margin:0 auto;line-height:2.2;color:var(--g700)">
+      <p style="margin-bottom:14px"><strong style="color:var(--navy)">أرقام الاتصال:</strong> 00989014935691 — <strong>واتس اب:</strong> 00989226354568</p>
+      <p style="margin-bottom:14px">المفاعلات الحيوية Raimand: في القدرات مختبرات مختلفة وشبه صناعية وصناعية بتصميم دقيق وذكي وتصميم وتصنيع جميع أنواع التخمير الأوتوماتيكي مع القدرة على SIP و CIP.</p>
+      <p style="margin-bottom:14px"><strong>الأجزاء الرئيسية من التخمير:</strong> حاوية زراعة، مضخات. ملحقات أوعية الزراعة بما في ذلك أنبوب التهوية، النادل، وأنابيب أخذ العينات، ومحرك التحريك، والمكثف، ومستشعر درجة الحرارة، ومستشعر المستوى، والمنافذ الإضافية، ونظام التحكم، والدائر، وبرنامج التحكم بموجب برنامج عالي القدرة.</p>
+      <p style="margin-bottom:14px"><strong>خصائص أجهزة التخمير القابلة للتعقيم بالبخار:</strong> حاوية زراعة (خزان زجاجي بيركس في نطاق المختبر والفولاذ المقاوم للصدأ في المقياس الصناعي وشبه الصناعي 316). PH-DO. نظام التحكم في درجة الحرارة. مضخات تمعجية متغيرة السرعة ذات تدفق قابل للتعديل، واتسون مارلو.</p>
+      <p style="margin-bottom:14px"><strong>ميزات نظام التحكم:</strong> قياس دقيق لقيمة PH-DO حول المحرك ودرجة الحرارة والرغوة وتخزين البيانات. قياس غازات العادم داخل الخزان بواسطة TMFC و OFF-GASS.</p>
+      <p style="margin-bottom:14px"><strong>مزايا معالجات شركة Raimand:</strong> مضخة تغذية الغاز. مع TMFC — القدرة على ترقية البرنامج وإضافة الخيار المطلوب والضمان وخدمات ما بعد البيع المستمرة والمرونة في التصميم.</p>
+      <p style="margin-bottom:14px"><strong>تشمل التطبيقات الأخرى للمخمر:</strong> عمليات التخمير المتقطعة، وإنتاج المضادات الحيوية، والأحماض الأمينية، البروتينات الطبية، إنتاج المنتجات البيولوجية على نطاق صغير في مجال التكنولوجيا الحيوية ومراكز أبحاث زراعة الأنسجة، والخلايا النباتية وتقنية الحمض النووي المؤتلف.</p>
+      <p style="margin-bottom:14px">الأجهزة التي تنتجها هذه الشركة تشمل سنتين من الضمان و 10 سنوات من خدمة ما بعد البيع وتركيب مجاني للمشتري المحترم.</p>
+      <p style="color:var(--navy);font-weight:700;font-size:1.05rem">نحن في خدمتك مع 10 سنوات من الخبرة</p>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════════ ARABIC CONTACT ═══════════ -->
+<div id="p-contact-ar" class="pg">
+  <div class="sec"><div class="wrap">
+    <h2 class="sec-t">اتصل <em>بنا</em></h2>
+    <div class="ct-grid">
+      <div class="ct-card">
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:18px">معلومات الاتصال</h3>
+        <div class="ct-row"><div class="ct-ico">📍</div><div><h4>العنوان</h4><p style="font-weight:500">الكيلومتر 55 من طريق كاراج قزوين السريع، نهاية شارع سوبا - نهاية شارع كافاش، حديقة البرز للعلوم والتكنولوجيا</p></div></div>
+        <div class="ct-row"><div class="ct-ico">📞</div><div><h4>رقم الهاتف</h4><p style="direction:ltr;text-align:inherit">026-34702370</p></div></div>
+        <div class="ct-row"><div class="ct-ico">💬</div><div><h4>واتساب</h4><p style="direction:ltr;text-align:inherit">00989226354568</p></div></div>
+        <div class="ct-row"><div class="ct-ico">📧</div><div><h4>البريد الإلكتروني</h4><p style="direction:ltr;text-align:inherit">raimandteifvarian@gmail.com</p></div></div>
+      </div>
+      <div class="ct-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+        <div style="font-size:3.5rem;margin-bottom:12px">🏢</div>
+        <h3 style="color:var(--navy);margin-bottom:6px">شرکت رایمند طیف واریان</h3>
+        <p style="color:var(--g400);margin-bottom:20px">حديقة البرز للعلوم والتكنولوجيا</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+          <a href="tel:02634702370" class="btn btn-p">📞 اتصل</a>
+          <a href="https://wa.me/989226354568" target="_blank" rel="noopener" class="btn btn-o">💬 واتساب</a>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- FOOTER -->
+<footer class="ftr"><div class="wrap">
+  <div class="ftr-grid">
+    <div><h4 data-t="logo">رایمند طیف واریان</h4><p data-t="ftrdesc">شرکت دانش‌بنیان رایمند طیف واریان، تولیدکننده تجهیزات آزمایشگاهی و صنعتی پیشرفته شامل فرمانتور (بیوراکتور)، دستگاه گازکروماتوگرافی و اینکوباتور CO2. تمامی تجهیزات شامل ۲ سال گارانتی و ۱۰ سال خدمات پس از فروش.</p></div>
+    <div><h4 data-t="ftrlinks">دسترسی سریع</h4><ul id="fNav"></ul></div>
+    <div><h4 data-t="cnit">تماس با ما</h4><p data-t="cnaddr">کیلومتر ۵۵ اتوبان کرج قزوین، انتهای بلوار سوپا، انتهای بلوار کاوش، پارک علم و فناوری البرز</p><p>📞 <a href="tel:02634702370">026-34702370</a></p><p>📱 <a href="https://wa.me/989226354568">09226354568</a></p><p>📧 raimandteifvarian@gmail.com</p></div>
+  </div>
+  <div class="ftr-bot">© <span data-t="copy">تمامی حقوق برای شرکت رایمند طیف واریان محفوظ است.</span></div>
+</div></footer>
+
+<!-- WA -->
+<a href="https://wa.me/989226354568" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- LB -->
+<div class="lb" id="lb" onclick="lbClose()"><button class="lb-x" onclick="lbClose()">×</button><img id="lbI" src="" alt=""></div>
+
+<script>
+/* ═══════════════════════════════════════
+   TRANSLATIONS
+   ═══════════════════════════════════════ */
+const L={
+fa:{
+topbar:'🔬 بیش از ۱۰ سال تجربه در ساخت تجهیزات آزمایشگاهی و صنعتی',
+phone:'۰۲۶-۳۴۷۰۲۳۷۰',logo:'فرمانتور','logo-s':'رایمند طیف واریان',
+badge:'🔬 شرکت دانش‌بنیان رایمند طیف واریان',
+h1a:'ساخت ',h1b:'فرمانتور',h1c:' و ',h1d:'بیوراکتور',
+hsub:'طراحی و ساخت انواع فرمانتورهای اتوماتیک با قابلیت SIP و CIP — ۲ سال گارانتی و ۱۰ سال خدمات پس از فروش',
+s1:'سال تجربه',s2:'سال گارانتی',s3:'سال خدمات پس از فروش',s4:'پشتیبانی',
+ptit:'محصولات <em>رایمند طیف واریان</em>',psub:'تولید تجهیزات آزمایشگاهی و صنعتی پیشرفته با تکنولوژی روز دنیا',
+ftit:'فرمانتور چیست؟',
+fd1:'فرمانتور دستگاهی است که شرایط بهینه را برای رشد میکروارگانیسم‌ها مثل قارچ و باکتری و مخمر فراهم می‌کند. میکروارگانیسم‌ها در این شرایط خاص، بهتر و بیش‌تر رشد و فعالیت خواهند کرد.',
+fd2:'استفاده از فرمانتور به میکروارگانیسم‌ها این امکان را می‌دهد که پیش از انتقال به مرحله‌ی تولید بیش از ده نسل رشد کنند. با این دستگاه می‌توان پارامترهای دما و فوم، دور موتور، مقدار اکسیژن و pH را مدام کنترل کرد.',
+fd3:'فرمانتورها و بیوراکتورها برای کشت سلول‌های جانوری و گیاهی هم استفاده می‌شوند. با یک هوادهنده برای تأمین اکسیژن در فرآیندهای هوازی و نیز یک اسپارجر برای یکنواخت ساختن غلظت محیط کشت و یک ترموستات برای تنظیم دمای محیط کشت فراهم می‌شود.',
+fd4:'راکتورها می‌توانند جهت تولید انبوه مواد شیمیایی، دارویی و مواد پتروشیمی و در واحدهای صنعتی بزرگ به کار گرفته شوند و یا جهت انجام مطالعات و تحقیقات و در ابعاد کوچک به کار بروند.',
+fd5:'طراحی راکتورها با توجه به مکانیسم واکنش و همچنین نوع واکنش و فاز مواد درگیر در واکنش متفاوت است. در طراحی راکتورهای شیمیایی برخی از پارامترها مانند دما، فشار و دبی مواد ورودی و خروجی، توسط طراح قابل تغییر است.',
+gd:'۲ سال گارانتی + ۱۰ سال خدمات پس از فروش',gp:'تمامی دستگاه‌های تولید شده توسط این شرکت',
+atit:'کاربردهای <em>فرمانتور</em>',asub:'از صنایع تخمیری تا تولید دارو و واکسن',
+ftit2:'فرمانتور <em>(بیوراکتور)</em>',fsub2:'ساخت فرمانتور ۵، ۱۰، ۲۰ لیتری قابل اتوکلاو و ۲۰۰ لیتری با سیستم CIP و SIP',
+fb1:'بیوراکتورهای رایمند',
+fb2:'در ظرفیت‌های مختلف آزمایشگاهی، نیمه‌صنعتی و صنعتی با طراحی دقیق و هوشمندانه. طراحی و ساخت انواع فرمانتورهای اتوماتیک با قابلیت SIP و CIP.',
+fb3:'بخش‌های اصلی فرمانتور: ظرف کشت، پمپ‌ها، لوازم جانبی ظرف کشت شامل لوله هوادهی، اسپارجر، لوله‌های نمونه‌برداری، موتور و همزن، کندانسور، سنسور دما، سنسور سطح، پورت‌های افزودنی، سیستم کنترلی، سیرکولاتور، برنامه کنترلی تحت نرم‌افزار با قابلیت بالا.',fb4:'بخش‌های اصلی فرمانتور:',
+fspec:'مشخصات فنی فرمانتورهای قابل اتوکلاو',
+sp1:'ظرف کشت',sv1:'مخزن شیشه‌ای از جنس پیرکس در مقیاس آزمایشگاهی و استیل ضد زنگ 316 در مقیاس صنعتی و نیمه‌صنعتی',
+sp2:'سنسورها',sp3:'سیستم کنترل دما',sv3:'در محدوده دمای محیط تا ۶۰ درجه سانتیگراد',
+sp4:'پمپ‌ها',sv4:'پمپ‌های پریستالتیک دور متغیر با قابلیت تنظیم دبی Watson Marlow',
+sp5:'سیستم کنترلی',sv5:'اندازه‌گیری دقیق مقدار PH-DO، دور موتور، دما، فوم و ذخیره‌سازی اطلاعات',
+sp6:'اندازه‌گیری گاز',sv6:'اندازه‌گیری گازهای خروجی داخل مخزن توسط TMFC و OFF-GASS',
+sp7:'پولیش سطوح در تماس',sv7:'316 مکانیکی و الکتروپولیش تا ۰.۲ میکرون',
+sp8:'پولیش سطوح غیرتماس',sv8:'304 مکانیکی و آینه تا ۰.۶ میکرون',
+fadv:'مزایای فرمانتورهای شرکت رایمند',
+fdet:'مشخصات تفصیلی فرمانتور ۵-۱۰-۲۰-۲۰۰ لیتری',
+dt1:'مخزن شیشه‌ای آلمانی',dt1d:'مدرج پولیش پلت در حد ۰.۶ میکرون نگهدارنده، صفحه بالایی و اتصالات از جنس استیل ضد زنگ L 316 SANDWICK. پره‌های همزن (از نوع راشتون).',
+dt2:'سنسورها و سیستم کنترل',dt2a:'سنسور pH (سوئیس)',dt2b:'سنسور DO (سوئیس)',
+dt2c:'کامپیوتر PC با قابلیت نصب نمایش نمودار تغییرات دما، دور همزن، غلظت اکسیژن محلول (DO) و pH. ذخیره‌سازی اطلاعات در پوشه جداگانه. کنترل دما، pH، DO، سرعت چرخش همزن و کف. کالیبراسیون الکترودهای pH و DO. تنظیم مقادیر متغیرها.',
+dt3:'سیستم‌های کنترلی',dt3d:'با قابلیت اندازه‌گیری و کنترل دما، pH، DO، سرعت چرخش همزن و کف شامل:',
+gfull:'دستگاه‌های تولید شده شامل ۲ سال گارانتی و ۱۰ سال خدمات پس از فروش می‌باشد.',
+gtit:'گالری تصاویر فرمانتور',
+ctit:'بیوراکتور <em>کشت سلولی</em>',csub:'در ظرفیت‌های آزمایشگاهی با سنسورهای پیشرفته',cfeat:'ویژگی‌های بیوراکتور کشت سلولی',
+gtit2:'گازکروماتوگرافی <em>GC</em>',gsub2:'ساخت شرکت رایمند طیف واریان مطابق با تکنولوژی Agilent 8890',
+gd1:'دستگاه گازکروماتوگرافی رایمند طیف واریان',
+gg:'دستگاه ۲ سال گارانتی و ۱۰ سال خدمات پس از فروش دارد.',
+gnote:'<strong style="color:var(--navy)">در ساخت این مدل از GC توسط شرکت رایمند</strong> سعی بر آن شده است تا تمامی نمونه‌های تزریقی به این GC با نمونه 8890 مطابقت داشته باشد و پاسخگویی دستگاه دقیقاً مطابق با نمونه خارجی آن باشد.',
+gcq:'کروماتوگرافی گازی چیست؟',
+icit:'اینکوباتور <em>CO2</em>',isub:'اینکوباتور دی‌اکسید کربن با دقت بالا',ispec:'مشخصات فنی اینکوباتور CO2',
+ptit2:'اتوماسیون صنعتی و <em>پتروشیمی</em>',psub2:'اندازه‌گیری مقادیر آنالوگ و نرم‌افزار ردینگ دیتا با سورس سوئیس',
+abtit:'شرکت <em>رایمند طیف واریان</em>',absub:'ساخت فرمانتور و گازکروماتوگرافی',
+abg:'تمامی تجهیزات ساخت این مجموعه',abgp:'۲ سال گارانتی و پشتیبانی ۲۴ ساعته و ۱۰ سال خدمات پس از فروش دارد',
+abprod:'محصولات ما',
+abp1:'دستگاه فرمانتور',abp1d:'بیوراکتورهای آزمایشگاهی، نیمه‌صنعتی و صنعتی',
+abp2:'دستگاه گازکروماتوگرافی',abp2d:'GC مطابق با تکنولوژی Agilent 8890',
+abp3:'اینکوباتور CO2',abp3d:'اینکوباتور دی‌اکسید کربن با دقت بالا',
+cntit:'تماس <em>با ما</em>',cnsub:'ما در خدمت شما هستیم',cninfo:'اطلاعات تماس',
+'cnaddr-l':'آدرس',cnaddr:'کیلومتر ۵۵ اتوبان کرج قزوین، انتهای بلوار سوپا، انتهای بلوار کاوش، پارک علم و فناوری البرز',
+'cnphone-l':'شماره تماس','cnmob-l':'شماره همراه',
+company:'شرکت رایمند طیف واریان',park:'پارک علم و فناوری البرز',
+callbtn:'📞 تماس تلفنی',wabtn:'💬 واتس‌اپ',
+ftrdesc:'شرکت دانش‌بنیان رایمند طیف واریان، تولیدکننده تجهیزات آزمایشگاهی و صنعتی پیشرفته شامل فرمانتور (بیوراکتور)، دستگاه گازکروماتوگرافی و اینکوباتور CO2. تمامی تجهیزات شامل ۲ سال گارانتی و ۱۰ سال خدمات پس از فروش.',
+ftrlinks:'دسترسی سریع',
+copy:'تمامی حقوق برای شرکت رایمند طیف واریان محفوظ است.'
+},
+en:{
+topbar:'🔬 Over 10 years experience in laboratory & industrial equipment manufacturing',
+phone:'+98-26-34702370',logo:'Fermentor','logo-s':'Raimand Teif Varian',
+badge:'🔬 Raimand Teif Varian Knowledge-Based Company',
+h1a:'Manufacturing ',h1b:'Fermentors',h1c:' & ',h1d:'Bioreactors',
+hsub:'Design and manufacturing of automatic fermentors with SIP and CIP capability — 2 years warranty and 10 years after-sales service',
+s1:'Years Experience',s2:'Years Warranty',s3:'Years After-Sales',s4:'Support',
+ptit:'<em>Raimand Teif Varian</em> Products',psub:'Manufacturing advanced laboratory and industrial equipment',
+ftit:'What is a Fermentor?',
+fd1:'A fermentor is a device that provides optimal conditions for the growth of microorganisms such as fungi, bacteria, and yeast. Microorganisms will grow and function better and more under these specific conditions.',
+fd2:'Using a fermentor allows microorganisms to grow for more than ten generations before being transferred to the production stage. With this device, temperature, foam, motor speed, oxygen level, and pH parameters can be constantly controlled.',
+fd3:'Fermentors and bioreactors are also used for animal and plant cell culture. An aerator is used to supply oxygen in aerobic processes, a sparger to homogenize the culture medium, and a thermostat to regulate the medium temperature.',
+fd4:'Reactors can be used for mass production of chemicals, pharmaceuticals, and petrochemicals in large industrial units, or for research and studies on a small scale.',
+fd5:'Reactor design varies depending on the reaction mechanism, reaction type, and phase of materials involved. In chemical reactor design, some parameters such as temperature, pressure, and flow rate can be adjusted by the designer.',
+gd:'2 Years Warranty + 10 Years After-Sales Service',gp:'All equipment manufactured by this company',
+atit:'Fermentor <em>Applications</em>',asub:'From fermentation industries to pharmaceutical production',
+ftit2:'Fermentor <em>(Bioreactor)</em>',fsub2:'Manufacturing 5, 10, 20 liter autoclavable and 200 liter with CIP & SIP',
+fb1:'Raimand Bioreactors',
+fb2:'In various laboratory, semi-industrial and industrial capacities with precise and intelligent design. Design and manufacturing of automatic fermentors with SIP and CIP capability.',
+fb3:'Main sections: culture vessel, pumps, vessel accessories including aeration tube, sparger, sampling tubes, motor and stirrer, condenser, temperature sensor, level sensor, additional ports, control system, circulator, software-based control program with high capability.',fb4:'Main Sections:',
+fspec:'Technical Specifications of Autoclavable Fermentors',
+sp1:'Culture Vessel',sv1:'Borosilicate glass vessel for laboratory scale and 316 stainless steel for industrial and semi-industrial scale',
+sp2:'Sensors',sp3:'Temperature Control',sv3:'Ambient to 60°C',
+sp4:'Pumps',sv4:'Variable speed peristaltic pumps with adjustable flow rate — Watson Marlow',
+sp5:'Control System',sv5:'Precise measurement of PH-DO, motor speed, temperature, foam and data storage',
+sp6:'Gas Measurement',sv6:'Exhaust gas measurement inside vessel by TMFC and OFF-GASS',
+sp7:'Contact Surface Polish',sv7:'316 mechanical and electropolished to 0.2 micron',
+sp8:'Non-Contact Surface Polish',sv8:'304 mechanical and mirror polished to 0.6 micron',
+fadv:'Raimand Fermentor Advantages',
+fdet:'Detailed Specifications — 5/10/20/200 Liter Fermentor',
+dt1:'German Glass Vessel',dt1d:'Graduated polished pellet retainer to 0.6 micron, top plate and connections from L 316 SANDWICK stainless steel. Rushton type stirrer blades.',
+dt2:'Sensors & Control System',dt2a:'pH Sensor (Switzerland)',dt2b:'DO Sensor (Switzerland)',
+dt2c:'Panel PC with capability to display temperature, stirrer speed, dissolved oxygen (DO) and pH charts. Data storage in separate folders. Control of temperature, pH, DO, stirrer speed and foam. pH and DO electrode calibration. Variable parameter adjustment.',
+dt3:'Control Systems',dt3d:'With capability to measure and control temperature, pH, DO, stirrer speed and foam:',
+gfull:'Equipment produced by this company includes 2 years warranty and 10 years after-sales service.',
+gtit:'Fermentor Gallery',
+ctit:'Cell Culture <em>Bioreactor</em>',csub:'Laboratory capacities with advanced sensors',cfeat:'Cell Culture Bioreactor Features',
+gtit2:'Gas Chromatography <em>GC</em>',gsub2:'Manufactured by Raimand Teif Varian according to Agilent 8890 technology',
+gd1:'Raimand Teif Varian GC Device',
+gg:'Device includes 2 years warranty and 10 years after-sales service.',
+gnote:'<strong style="color:var(--navy)">In manufacturing this GC model</strong>, Raimand company has ensured that all injected samples match the 8890 model and device response is exactly in accordance with the foreign model.',
+gcq:'What is Gas Chromatography?',
+icit:'<em>CO2</em> Incubator',isub:'CO2 incubator with high precision',ispec:'CO2 Incubator Technical Specifications',
+ptit2:'Industrial Automation & <em>Petrochemical</em>',psub2:'Analog measurement and reading data software with Swiss source',
+abtit:'<em>Raimand Teif Varian</em> Company',absub:'Fermentor and Gas Chromatography Manufacturing',
+abg:'All equipment manufactured by this company',abgp:'2 years warranty, 24/7 support and 10 years after-sales service',
+abprod:'Our Products',
+abp1:'Fermentor Device',abp1d:'Laboratory, semi-industrial and industrial bioreactors',
+abp2:'Gas Chromatography Device',abp2d:'GC according to Agilent 8890 technology',
+abp3:'CO2 Incubator',abp3d:'CO2 incubator with high precision',
+cntit:'Contact <em>Us</em>',cnsub:'We are at your service',cninfo:'Contact Information',
+'cnaddr-l':'Address',cnaddr:'Km 55 Karaj-Qazvin Freeway, Soba Blvd end, Kavosh Blvd end, Alborz Science & Technology Park',
+'cnphone-l':'Phone','cnmob-l':'Mobile',
+company:'Raimand Teif Varian Co.',park:'Alborz Science & Technology Park',
+callbtn:'📞 Call Us',wabtn:'💬 WhatsApp',
+ftrdesc:'Raimand Teif Varian is a knowledge-based company manufacturing advanced laboratory and industrial equipment including fermentors (bioreactors), gas chromatography devices and CO2 incubators. All equipment includes 2 years warranty and 10 years after-sales service.',
+ftrlinks:'Quick Links',
+copy:'All rights reserved for Raimand Teif Varian Company.'
+}
+};
+
+/* ═══════════════════════════════════════
+   DYNAMIC CONTENT
+   ═══════════════════════════════════════ */
+const W='https://web.archive.org/web';
+const SLIDES=[
+  {img:`${W}/20260211193254im_/https://fermentor.ir/wp-content/uploads/2025/11/1125.jpg`,fa:{t:'فرمانتور (بیوراکتور)',d:'ظرفیت‌های ۵، ۱۰، ۲۰ لیتری قابل اتوکلاو و ۲۰۰ لیتری با سیستم CIP و SIP'},en:{t:'Fermentor (Bioreactor)',d:'5, 10, 20 liter autoclavable and 200 liter with CIP & SIP system'}},
+  {img:`${W}/20250815050831im_/https://fermentor.ir/wp-content/uploads/2023/03/%DA%AF%D8%A7%D8%B2%DA%A9%D8%B1%D9%88%D9%85%D8%A7%D8%AA%D9%88%DA%AF%D8%B1%D8%A7%D9%81-1.jpg`,fa:{t:'گازکروماتوگرافی GC',d:'مطابق تکنولوژی Agilent 8890 — دتکتور FID و TCD — دقت ppm'},en:{t:'Gas Chromatography GC',d:'According to Agilent 8890 — FID & TCD detectors — ppm accuracy'}},
+  {img:`${W}/20260211183457im_/https://fermentor.ir/wp-content/uploads/2024/09/Screenshot_%DB%B2%DB%B0%DB%B2%DB%B4%DB%B0%DB%B9%DB%B1%DB%B7_%DB%B1%DB%B8%DB%B1%DB%B9%DB%B4%DB%B5_Gallery-1021x576.jpg`,fa:{t:'اینکوباتور CO2',d:'بدنه استنلس استیل — سنسور PT100 — محدوده ۱ تا ۱۵٪ CO2'},en:{t:'CO2 Incubator',d:'Stainless steel body — PT100 sensor — 1 to 15% CO2 range'}},
+  {img:`${W}/20260211175323im_/https://fermentor.ir/wp-content/uploads/2024/09/Screenshot_%DB%B2%DB%B0%DB%B2%DB%B4%DB%B0%DB%B9%DB%B1%DB%B7_%DB%B1%DB%B8%DB%B0%DB%B0%DB%B1%DB%B1_Gallery-820x1024.jpg`,fa:{t:'بیوراکتور کشت سلولی',d:'سنسورهای دما pH و DO و CO2 — برگرفته از مدل New Brunswick'},en:{t:'Cell Culture Bioreactor',d:'Temperature, pH, DO and CO2 sensors — Based on New Brunswick model'}},
+  {img:`${W}/20260211185851im_/https://fermentor.ir/wp-content/uploads/2022/02/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AA%D9%88%D8%B1-Copy.png`,fa:{t:'اتوماسیون صنعتی و پتروشیمی',d:'اندازه‌گیری مقادیر آنالوگ — نرم‌افزار ردینگ دیتا با سورس سوئیس'},en:{t:'Industrial Automation',d:'Analog measurement — Reading data software with Swiss source'}},
+  {img:`${W}/20260211181231im_/https://fermentor.ir/wp-content/uploads/2022/02/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AA%D9%88%D8%B1%DB%B1.jpg`,fa:{t:'تجهیزات فرمانتور',d:'مخزن شیشه‌ای آلمانی — سنسور سوئیسی — پمپ Watson Marlow'},en:{t:'Fermentor Equipment',d:'German glass vessel — Swiss sensors — Watson Marlow pumps'}}
+];
+
+const CARDS=[
+  {img:`${W}/20260211193254im_/https://fermentor.ir/wp-content/uploads/2022/02/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AA%D9%88%D8%B1%DB%B2.jpg`,tag:{fa:'محصول اصلی',en:'Main'},fa:{t:'فرمانتور (بیوراکتور)',d:'ساخت فرمانتور ۵، ۱۰، ۲۰ لیتری قابل اتوکلاو و ۲۰۰ لیتری با سیستم CIP و SIP'},en:{t:'Fermentor (Bioreactor)',d:'5, 10, 20 liter autoclavable and 200 liter with CIP & SIP system'},p:'fermentor'},
+  {img:`${W}/20250815050831im_/https://fermentor.ir/wp-content/uploads/2023/03/%DA%AF%D8%A7%D8%B2%DA%A9%D8%B1%D9%88%D9%85%D8%A7%D8%AA%D9%88%DA%AF%D8%B1%D8%A7%D9%81-1.jpg`,tag:{fa:'Agilent 8890',en:'Agilent 8890'},fa:{t:'گازکروماتوگرافی GC',d:'مطابق تکنولوژی Agilent 8890 با دتکتور FID و TCD، دقت ppm'},en:{t:'Gas Chromatography GC',d:'According to Agilent 8890 with FID and TCD detectors, ppm accuracy'},p:'gc'},
+  {img:`${W}/20260211183457im_/https://fermentor.ir/wp-content/uploads/2024/09/Screenshot_%DB%B2%DB%B0%DB%B2%DB%B4%DB%B0%DB%B9%DB%B1%DB%B7_%DB%B1%DB%B8%DB%B1%DB%B9%DB%B4%DB%B5_Gallery-1021x576.jpg`,tag:{fa:'جدید',en:'New'},fa:{t:'اینکوباتور CO2',d:'بدنه استنلس استیل، سنسور PT100 و سنسور گاز CO2 با دقت بالا'},en:{t:'CO2 Incubator',d:'Stainless steel body, PT100 sensor and high-precision CO2 gas sensor'},p:'incubator'},
+  {img:`${W}/20260211175323im_/https://fermentor.ir/wp-content/uploads/2024/09/Screenshot_%DB%B2%DB%B0%DB%B2%DB%B4%DB%B0%DB%B9%DB%B1%DB%B7_%DB%B1%DB%B8%DB%B0%DB%B0%DB%B1%DB%B1_Gallery-820x1024.jpg`,tag:{fa:'New Brunswick',en:'New Brunswick'},fa:{t:'بیوراکتور کشت سلولی',d:'سنسورهای دما pH و DO و CO2 و آنتی‌فوم — برگرفته از مدل New Brunswick'},en:{t:'Cell Culture Bioreactor',d:'Temperature, pH, DO, CO2 and anti-foam sensors — Based on New Brunswick model'},p:'cellculture'},
+  {img:`${W}/20260211185851im_/https://fermentor.ir/wp-content/uploads/2022/02/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AA%D9%88%D8%B1-Copy.png`,tag:{fa:'اتوماسیون',en:'Automation'},fa:{t:'اتوماسیون صنعتی و پتروشیمی',d:'اندازه‌گیری مقادیر آنالوگ و نرم‌افزار ردینگ دیتا با سورس سوئیس'},en:{t:'Industrial & Petrochemical Automation',d:'Analog measurement and reading data software with Swiss source'},p:'petro'}
+];
+
+const APPS=[
+  {i:'🧬',fa:{t:'صنایع تخمیری و بیوتکنولوژی',d:'صنایع تخمیری، بیوتکنولوژی، پروژه‌های تحقیقاتی تکنولوژی آنزیمی'},en:{t:'Fermentation & Biotechnology',d:'Fermentation industries, biotechnology, enzymatic technology research projects'}},
+  {i:'💊',fa:{t:'تولید دارو و واکسن',d:'تولید پروتئین‌های نوترکیب، تولید انواع داروها و واکسن‌ها'},en:{t:'Drug & Vaccine Production',d:'Recombinant protein production, manufacturing various drugs and vaccines'}},
+  {i:'🔬',fa:{t:'تحقیقات پیشرفته',d:'فراورده‌های اولیه و ثانویه، تکنولوژی کلونینگ ژن‌ها و نانو، تولید سرم'},en:{t:'Advanced Research',d:'Primary and secondary products, gene cloning and nano technology, serum production'}},
+  {i:'🧪',fa:{t:'فرآیندهای تخمیری',d:'فرآیندهای تخمیری ناپیوسته، تولید آنتی‌بیوتیک‌ها، اسیدهای آمینه، پروتئین‌های دارویی'},en:{t:'Fermentation Processes',d:'Batch fermentation, antibiotic production, amino acids, pharmaceutical proteins'}},
+  {i:'🌿',fa:{t:'کشت بافت و سلول',d:'تولید فرآورده‌های زیستی در مقیاس کم، کشت بافت، سلول‌های گیاهی و تکنولوژی دی‌ان‌ای نوترکیب'},en:{t:'Tissue & Cell Culture',d:'Small-scale biological product manufacturing, tissue culture, plant cells and recombinant DNA technology'}},
+  {i:'🏭',fa:{t:'صنعت و تحقیق',d:'جهت تولید انبوه مواد شیمیایی، دارویی و پتروشیمی در واحدهای صنعتی بزرگ'},en:{t:'Industry & Research',d:'Mass production of chemicals, pharmaceuticals and petrochemicals in large industrial units'}}
+];
+
+const ADVS=[
+  {i:'🔄',fa:{t:'OFF-GASS FEEDING PUMP',d:'سیستم تغذیه پیشرفته با قابلیت اندازه‌گیری گازهای خروجی'},en:{t:'OFF-GASS FEEDING PUMP',d:'Advanced feeding system with exhaust gas measurement capability'}},
+  {i:'📊',fa:{t:'TMFC',d:'قابلیت ارتقای نرم‌افزار و افزودن آپشن مورد نظر'},en:{t:'TMFC',d:'Software upgrade capability and adding desired options'}},
+  {i:'🛡️',fa:{t:'گارانتی و خدمات',d:'گارانتی و خدمات پس از فروش مستمر'},en:{t:'Warranty & Service',d:'Continuous warranty and after-sales service'}},
+  {i:'🎛️',fa:{t:'صفحه نمایش لمسی',d:'نمایش مقادیر ورودی، وضعیت خروجی‌ها و تنظیمات از طریق صفحه‌ی نمایش لمسی'},en:{t:'Touch Screen',d:'Input values display, output status and settings via touchscreen display'}},
+  {i:'💾',fa:{t:'ذخیره‌سازی اطلاعات',d:'ذخیره‌ی کلیه‌ی اطلاعات وضعیت فرمانتور مانند دما، فشار، گراف و دیگر متغییرها'},en:{t:'Data Storage',d:'Storage of all fermentor status data including temperature, pressure, graphs and other variables'}},
+  {i:'⚙️',fa:{t:'SIP و CIP',d:'استریلیزاسیون در محل (SIP) و شستشو در محل (CIP)'},en:{t:'SIP & CIP',d:'Sterilization in Place (SIP) and Cleaning in Place (CIP)'}}
+];
+
+const GALLERY=[
+  `${W}/20260211181231im_/https://fermentor.ir/wp-content/uploads/2022/02/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AA%D9%88%D8%B1%DB%B2.jpg`,
+  `${W}/20260211181231im_/https://fermentor.ir/wp-content/uploads/2022/02/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AA%D9%88%D8%B1%DB%B1.jpg`,
+  `${W}/20260211181231im_/https://fermentor.ir/wp-content/uploads/2022/01/ioio-741x1024.jpg`,
+  `${W}/20260211181231im_/https://fermentor.ir/wp-content/uploads/2022/01/rtjdrytrt-1024x687.jpg`,
+  `${W}/20260211181231im_/https://fermentor.ir/wp-content/uploads/2022/01/teryrty.jpg`,
+  `${W}/20260211181231im_/https://fermentor.ir/wp-content/uploads/2022/01/%DB%B2%DB%B0%DB%B2%DB%B1%DB%B1%DB%B1%DB%B1%DB%B6_%DB%B1%DB%B3%DB%B2%DB%B4%DB%B4%DB%B0-889x1024.jpg`
+];
+
+const NAV=[
+  {id:'home',fa:'خانه',en:'Home'},
+  {id:'fermentor',fa:'فرمانتور',en:'Fermentor'},
+  {id:'cellculture',fa:'کشت سلولی',en:'Cell Culture'},
+  {id:'gc',fa:'گازکروماتوگرافی',en:'GC'},
+  {id:'incubator',fa:'اینکوباتور',en:'Incubator'},
+  {id:'petro',fa:'پتروشیمی',en:'Petrochemical'},
+  {id:'about',fa:'درباره ما',en:'About'},
+  {id:'contact',fa:'تماس',en:'Contact'}
+];
+
+const INC_SPEC={
+  fa:[['جنس بدنه خارجی','ورق آهن با پوشش رنگ الکترواستاتیک'],['بدنه داخلی','جنس ورق استنلس استیل'],['محدوده دمایی','از دمای محیط تا ۴۵ درجه سانتیگراد'],['درب','درب داخلی شیشه‌ای و درب بیرونی آهنی'],['محفظه داخلی','استیل 304 مات و دارای طبقه'],['سنسور دما','مدل PT100'],['سنسور گاز CO2','اندازه‌گیری گاز در محدوده ۱ تا ۱۵٪'],['دقت تنظیم دما','±۱.۰ درجه از محیط تا ۴۵°C'],['دقت CO2','±۰.۰'],['رگولاتور','فشارشکن داخلی برای تنظیم جریان و فشار گاز'],['برق','۲۲۰ ولت، ۵۰ هرتز']],
+  en:[['External Body','Iron sheet with electrostatic paint coating'],['Internal Body','Stainless steel sheet'],['Temperature Range','Ambient to 45°C'],['Door','Internal glass door and external iron door'],['Internal Chamber','Matte 304 steel with shelves'],['Temperature Sensor','PT100 model'],['CO2 Sensor','Gas measurement in 1-15% range'],['Temp Accuracy','±1.0°C ambient to 45°C'],['CO2 Accuracy','±0.0'],['Regulator','Internal pressure regulator for gas flow and pressure'],['Power','220V, 50Hz']
+};
+
+const GC_SPECS={
+  fa:[['سنسور pH','(سوئیس)'],['سنسور DO','(سوئیس)']],
+  en:[['pH Sensor','(Switzerland)'],['DO Sensor','(Switzerland)']]
+};
+
+const GC_ITEMS=[
+  {i:'⚗️',fa:{t:'دستگاه طرح Agilent 8890',d:'با دتکتور FID، کنترل و محاسبات در محیط ویندوز (Split/Splitless)'},en:{t:'Agilent 8890 Design',d:'With FID detector, control and calculations in Windows (Split/Splitless)'}},
+  {i:'💉',fa:{t:'سرنگ تزریق نمونه',d:'سیستم تزریق دقیق و خودکار'},en:{t:'Sample Injection Syringe',d:'Precise and automatic injection system'}},
+  {i:'🔧',fa:{t:'ستون کپیلاری ۳۰ متری',d:'غیرقطبی + فرول گرانیتی + کانکشن تبدیل کپیلاری'},en:{t:'30m Capillary Column',d:'Non-polar + graphite ferrule + capillary conversion connection'}},
+  {i:'🔬',fa:{t:'پک فیلتراسیون',d:'سیستم فیلتراسیون پیشرفته برای نتایج دقیق'},en:{t:'Filtration Pack',d:'Advanced filtration system for precise results'}}
+];
+
+const PETRO=[
+  {i:'📡',fa:{t:'سنسورها',d:'نصب سنسورهای اکسیژن، فشار، دما، کانداکتیویته، pH، غلظت، دیتالاگر، CO2'},en:{t:'Sensors',d:'Installation of oxygen, pressure, temperature, conductivity, pH, concentration, datalogger, CO2 sensors'}},
+  {i:'💧',fa:{t:'پمپ‌ها',d:'پمپ دوزینگ و پمپ پریستالتیک با خروجی متغیر قابل برنامه‌ریزی'},en:{t:'Pumps',d:'Dosing pump and peristaltic pump with programmable variable output'}},
+  {i:'🖥️',fa:{t:'نرم‌افزار و کنترلر',d:'تحت نرم‌افزار ویندوز و نصب انواع کنترلر PID با دقت ۰.۱ درجه در دما، فشار و pH'},en:{t:'Software & Controller',d:'Windows-based software and PID controller installation with 0.1°C accuracy in temperature, pressure and pH'}},
+  {i:'🔬',fa:{t:'سنسورهای مورد استفاده',d:'سنسور همیلتون و سنسور متلر. تهیه و نصب هر سنسور با خروجی آنالوگ و دیجیتال'},en:{t:'Sensors Used',d:'Hamilton and Mettler sensors. Procurement and installation of any sensor with analog and digital output'}}
+];
+
+/* ═══════════════════════════════════════
+   CORE FUNCTIONS
+   ═══════════════════════════════════════ */
+let lang='fa',page='home',sIdx=0,sTimer;
+
+function setLang(l){
+  lang=l;
+  const html=document.getElementById('htmlRoot');
+  html.setAttribute('lang',l);
+  html.setAttribute('dir',l==='fa'?'rtl':'ltr');
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.textContent.trim()===(l==='fa'?'فا':'EN')));
+  document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;if(L[l][k]!=null)el.innerHTML=L[l][k]});
+  buildAll();
+  document.title=l==='fa'?'فرمانتور (بیوراکتور) | رایمند طیف واریان':'Fermentor (Bioreactor) | Raimand Teif Varian';
+  document.getElementById('pageDesc').content=l==='fa'?'شرکت دانش‌بنیان رایمند طیف واریان — سازنده فرمانتور، گازکروماتوگرافی GC و اینکوباتور CO2':'Raimand Teif Varian — Manufacturer of Fermentors, GC Gas Chromatography and CO2 Incubators';
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+
+function buildAll(){
+  // Nav
+  document.getElementById('nav').innerHTML=NAV.map(n=>`<a href="#" class="${n.id===page?'on':''}" onclick="go('${n.id}')">${n[lang]}</a>`).join('');
+  document.getElementById('drw').innerHTML=NAV.map(n=>`<a href="#" onclick="go('${n.id}');togDrw()">${n[lang]}</a>`).join('')+
+    `<div style="padding:12px 14px;border-bottom:1px solid var(--g100);font-size:.82rem;color:var(--g400);font-weight:600;margin-top:8px">─── عربی ───</div>`+
+    `<a href="#" onclick="go('gc-ar');togDrw()">كروماتوغرافيا الغاز</a>`+
+    `<a href="#" onclick="go('fermentor-ar');togDrw()">المخمر-مفاعل حيوي</a>`+
+    `<a href="#" onclick="go('contact-ar');togDrw()">اتصل بنا</a>`;
+  document.getElementById('fNav').innerHTML=NAV.map(n=>`<li><a href="#" onclick="go('${n.id}')">${n[lang]}</a></li>`).join('');
+
+  // Slider
+  document.getElementById('slT').innerHTML=SLIDES.map(s=>`<div class="sl-s"><img src="${s.img}" alt="${s[lang].t}" loading="lazy"><div class="sl-cap"><h3>${s[lang].t}</h3><p>${s[lang].d}</p></div></div>`).join('');
+  document.getElementById('slD').innerHTML=SLIDES.map((_,i)=>`<button class="sl-dot${i===sIdx?' on':''}" onclick="sGo(${i})"></button>`).join('');
+  sUpdDesc();
+
+  // Cards
+  document.getElementById('cGrid').innerHTML=CARDS.map(c=>`<article class="card" onclick="go('${c.p}')"><div class="card-img"><img src="${c.img}" alt="${c[lang].t}" loading="lazy"><span class="card-tag">${c.tag[lang]}</span></div><div class="card-b"><h3>${c[lang].t}</h3><p>${c[lang].d}</p></div></article>`).join('');
+
+  // Applications
+  document.getElementById('appGrid').innerHTML=APPS.map(a=>`<div class="feat"><div class="feat-i">${a.i}</div><h3>${a[lang].t}</h3><p>${a[lang].d}</p></div>`).join('');
+
+  // Advantages
+  document.getElementById('advGrid').innerHTML=ADVS.map(a=>`<div class="feat"><div class="feat-i">${a.i}</div><h3>${a[lang].t}</h3><p>${a[lang].d}</p></div>`).join('');
+
+  // Gallery
+  document.getElementById('galGrid').innerHTML=GALLERY.map(g=>`<div class="gal-i" onclick="lb('${g}')"><img src="${g}" alt="فرمانتور" loading="lazy"></div>`).join('');
+
+  // Detail lists
+  document.getElementById('dt1List').innerHTML=lang==='fa'?
+    '<li>اتصالات بالای درب مخزن بدون جوشکاری و آب‌بندی با اورینگ و گاهت مکانیکال سیل</li><li>لوله تخلیه، اسپارجر، ۳ عدد تک نازله (اسید، باز، فید)</li><li>کندانسور، سنسور آنتی‌فوم، سنسور دما، سنسور pH و DO</li><li>موتور الکتریکی سروو</li>':
+    '<li>Top door connections without welding, sealed with O-ring and mechanical seal</li><li>Drain tube, sparger, 3 single nozzles (acid, base, feed)</li><li>Condenser, anti-foam sensor, temperature sensor, pH & DO sensor</li><li>Servo electric motor</li>';
+  document.getElementById('dt3List').innerHTML=lang==='fa'?
+    '<li>سیستم کنترل دما (محیط تا °C 60)</li><li>سیستم کنترل pH</li><li>سیستم کنترل غلظت اکسیژن محلول (DO)</li><li>سیستم کنترل کف</li><li>سیستم اختلاط (rpm 50-1200)</li><li>فلومتر مجزای اکسیژن و هوا</li><li>۳ عدد پمپ پریستالتیک Watson Marlow</li>':
+    '<li>Temperature control system (ambient to 60°C)</li><li>pH control system</li><li>Dissolved oxygen (DO) control system</li><li>Foam control system</li><li>Mixing system (50-1200 rpm)</li><li>Separate oxygen and air flowmeter</li><li>3 Watson Marlow peristaltic pumps</li>';
+
+  // Cell culture list
+  document.getElementById('cList').innerHTML=lang==='fa'?
+    '<li>بیوراکتور کشت سلولی در ظرفیت‌های آزمایشگاهی</li><li>سنسورهای دما pH و DO و CO2 و آنتی‌فوم</li><li>برگرفته از مدل New Brunswick</li><li>دارای ۲ سال گارانتی و ۱۰ سال خدمات پس از فروش</li>':
+    '<li>Cell culture bioreactor in laboratory capacities</li><li>Temperature, pH, DO, CO2 and anti-foam sensors</li><li>Based on New Brunswick model</li><li>2 years warranty and 10 years after-sales service</li>';
+
+  // GC list
+  document.getElementById('gcList').innerHTML=lang==='fa'?
+    '<li>مطابق با تکنولوژی Agilent 8890</li><li>با دتکتور FID و TCD (مطابق با Agilent)</li><li>با دقت ppm</li><li>آنالیز قوی و تکرارپذیری بالا</li><li>حساسیت بالای دتکتورها</li>':
+    '<li>According to Agilent 8890 technology</li><li>With FID and TCD detectors (matching Agilent)</li><li>With ppm accuracy</li><li>Strong analysis and high repeatability</li><li>High detector sensitivity</li>';
+
+  // GC specs
+  document.getElementById('gcSpecs').innerHTML=GC_ITEMS.map(g=>`<div class="feat"><div class="feat-i">${g.i}</div><h3>${g[lang].t}</h3><p>${g[lang].d}</p></div>`).join('');
+
+  // GC text
+  document.getElementById('gcText').innerHTML=lang==='fa'?
+    `<p style="margin-bottom:14px"><strong>کروماتوگرافی گازی</strong> یکی از روش‌های کروماتوگرافی است که برای بررسی و جداسازی مواد فرار بدون تجزیه شدن آن‌ها، بکار می‌رود.</p>
+    <p style="margin-bottom:14px">در کروماتوگرافی گازی، فاز گازی یک گاز بی‌اثر (برای مثال هلیوم، نیتروژن، آرگون و دی‌اکسید کربن) است و به فاز متحرک گاز حامل نیز می‌گویند.</p>
+    <p style="margin-bottom:14px">فاز ساکن یک جسم جامد جاذب یا لایه نازکی از یک مایع غیر فرار است که به دیواره داخلی ستون یا به صورت پوششی روی سطح گلوله‌های شیشه‌ای یا فلزی قرار داده شده است.</p>
+    <p style="margin-bottom:14px">در صورتی که فاز ساکن جسم جامد جاذب باشد اصطلاحاً کروماتوگرافی گازی گویند و اگر فاز ساکن مایع غیر فرار باشد آن را کروماتوگرافی گاز مایع گویند. اما هر دو به کروماتوگرافی گازی معروف هستند.</p>
+    <p style="margin-bottom:14px">در کروماتوگرافی گازی، جداسازی اجزا یک مخلوط متناسب با میزان توزیع اجزا تشکیل دهنده مخلوط بین فاز متحرک گازی و فاز ساکن جامد یا مایع صورت می‌گیرد.</p>
+    <p style="margin-bottom:14px">در این روش گاز حامل مخلوط را درون ستون حرکت می‌دهد و بین دو فاز در حالت تعادل (گاز-مایع) اجزا تشکیل دهنده مخلوط توزیع می‌شوند. بنابراین فاز متحرک اجزا تشکیل دهنده نمونه را به طرف بیرون ستون حرکت می‌دهد و هر مولکولی که با ارتباط سست‌تر جذب ستون شده است، زودتر و جزئی که قدرت جذب بیشتری با ستون دارد، دیرتر از ستون خارج می‌شوند.</p>
+    <p>کروماتوگرافی گازی برای جداسازی و شناسایی اجزا تشکیل دهنده یک مخلوط از مواد فرار و تجزیه کمی آن‌ها نیز کاربرد دارد.</p>`:
+    `<p style="margin-bottom:14px"><strong>Gas chromatography (GC)</strong> is a type of chromatography used for examining and separating volatile substances without decomposing them.</p>
+    <p style="margin-bottom:14px">In GC, the gaseous phase is an inert gas (such as helium, nitrogen, argon, and carbon dioxide), also called the carrier gas.</p>
+    <p style="margin-bottom:14px">The stationary phase is a solid adsorbent or a thin layer of a non-volatile liquid placed on the inner wall of the column or on glass or metal bead surfaces.</p>
+    <p style="margin-bottom:14px">If the stationary phase is a solid adsorbent, it is called gas-solid chromatography; if it is a non-volatile liquid, it is called gas-liquid chromatography. Both are commonly known as gas chromatography.</p>
+    <p style="margin-bottom:14px">In GC, the separation of mixture components is proportional to the distribution of components between the gaseous mobile phase and the solid or liquid stationary phase.</p>
+    <p style="margin-bottom:14px">In this method, the carrier gas moves the mixture through the column, and the components distribute between two phases in equilibrium (gas-liquid). The mobile phase carries sample components toward the column outlet — molecules with weaker column retention exit earlier, while those with stronger retention exit later, thus separating the mixture components.</p>
+    <p>Gas chromatography is also used for separating, identifying, and quantitatively analyzing volatile mixture components.</p>`;
+
+  // Incubator table
+  document.getElementById('iTable').innerHTML=INC_SPEC[lang].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('');
+
+  // Petro
+  document.getElementById('petroGrid').innerHTML=lang==='fa'?
+    PETRO.map(p=>`<div class="feat"><div class="feat-i">${p.i}</div><h3>${p[lang].t}</h3><p>${p[lang].d}</p></div>`).join(''):
+    PETRO.map(p=>`<div class="feat"><div class="feat-i">${p.i}</div><h3>${p[lang].t}</h3><p>${p[lang].d}</p></div>`).join('');
+
+  // About text
+  document.getElementById('abText').innerHTML=lang==='fa'?
+    `<p style="margin-bottom:14px;color:var(--g700);line-height:2.2">این مجموعه ابتدا از سال ۱۳۹۲ با نام شرکت رایمند زیست فناور شروع به ساخت فرمانتورهای آزمایشگاهی و صنعتی (بیوتکنولوژی) نمود. سپس در راستای ارتقای خدمات و تجهیزات آنالیزی و تحقیقاتی با شرکت جدید رایمند طیف واریان شروع به ساخت دستگاه‌های نانو نمود.</p>
+    <p style="margin-bottom:14px;color:var(--g700);line-height:2.2">و در حال حاضر با دستگاه‌هایی همانند GC، بیوراکتور و اینکوباتور CO2 در حال ارائه خدمات به محققین و فناوران عزیز می‌باشیم.</p>
+    <p style="color:var(--g700);line-height:2.2">در این راستا نظرات و پیشنهادات و حمایت‌های شما عزیزان بدین مجموعه ما را در ساخت تجهیزات با تکنولوژی‌های پیشرفته تر تشویق می‌نماید.</p>`:
+    `<p style="margin-bottom:14px;color:var(--g700);line-height:2.2">This collection initially started in 2013 under the name Raimand Zist Fanavar Company, manufacturing laboratory and industrial fermentors (biotechnology). Then, in line with upgrading analytical and research services and equipment, the new Raimand Teif Varian Company began manufacturing nano devices.</p>
+    <p style="margin-bottom:14px;color:var(--g700);line-height:2.2">Currently, we are providing services to dear researchers and technologists with devices such as GC, bioreactors, and CO2 incubators.</p>
+    <p style="color:var(--g700);line-height:2.2">In this regard, your opinions, suggestions and support encourage us to manufacture equipment with more advanced technologies.</p>`;
+}
+
+function go(id){
+  page=id;
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  const el=document.getElementById('p-'+id);
+  if(el)el.classList.add('on');
+  document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('on',a.textContent.trim()===NAV.find(n=>n.id===id)?.[lang]));
+  // Rebuild nav for active state
+  document.getElementById('nav').innerHTML=NAV.map(n=>`<a href="#" class="${n.id===page?'on':''}" onclick="go('${n.id}')">${n[lang]}</a>`).join('');
+  window.scrollTo({top:0,behavior:'smooth'});
+  return false;
+}
+
+function sGo(i){
+  sIdx=((i%SLIDES.length)+SLIDES.length)%SLIDES.length;
+  document.getElementById('slT').style.transform=`translateX(${sIdx*100}%)`;
+  document.querySelectorAll('.sl-dot').forEach((d,j)=>d.classList.toggle('on',j===sIdx));
+  sUpdDesc();
+  sRst();
+}
+function sUpdDesc(){const s=SLIDES[sIdx];document.getElementById('slDesc').innerHTML=`<h3>${s[lang].t}</h3><p>${s[lang].d}</p>`}
+function sMv(d){sGo(sIdx+d)}
+function sRst(){clearInterval(sTimer);sTimer=setInterval(()=>sGo(sIdx+1),5000)}
+
+function togDrw(){
+  document.getElementById('drw').classList.toggle('open');
+  document.getElementById('dov').classList.toggle('open');
+  document.getElementById('burg').classList.toggle('open');
+}
+function lb(src){document.getElementById('lbI').src=src;document.getElementById('lb').classList.add('open')}
+function lbClose(){document.getElementById('lb').classList.remove('open')}
+
+// Touch swipe
+let tx=0;
+const sf=document.querySelector('.sl-f');
+if(sf){
+  sf.addEventListener('touchstart',e=>{tx=e.changedTouches[0].screenX},{passive:true});
+  sf.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].screenX;if(Math.abs(d)>40){d>0?sMv(1):sMv(-1)}},{passive:true});
+}
+
+// Scroll header
+let ticking=false;
+window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{document.getElementById('hdr').classList.toggle('elev',window.scrollY>10);ticking=false});ticking=true}},{passive:true});
+
+// Reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.card,.feat,.st,.tc-img,.tc-text,.ct-card,.gal-i').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s ease, transform .6s ease';io.observe(el)});
+const style=document.createElement('style');style.textContent='.vis{opacity:1!important;transform:none!important}';document.head.appendChild(style);
+
+// Keyboard
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){lbClose();if(document.getElementById('drw').classList.contains('open'))togDrw()}
+  if(e.key==='ArrowLeft')sMv(-1);
+  if(e.key==='ArrowRight')sMv(1);
+});
+
+// Init
+const saved=localStorage.getItem('lang');
+if(saved)setLang(saved);else{setLang('fa')}
+sRst();
+</script>
+</body>
+</html>
